@@ -27,7 +27,6 @@ public class NIOClient {
         // 产生一个字节数组到 buffer 中
         ByteBuffer byteBuffer = ByteBuffer.wrap(data.getBytes());
         socketChannel.write(byteBuffer);
-        System.in.read();
         socketChannel.close();
     }
 }
