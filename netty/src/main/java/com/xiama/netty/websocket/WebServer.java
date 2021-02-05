@@ -40,6 +40,7 @@ public class WebServer {
                              * WebSocket 数据是以帧的形式传递
                              * ws://localhost:9999/xxx 请求uri
                              * WebSocketServerProtocolHandler 将 HTTP 协议升级为 ws 协议，保持长连接
+                             * 通过状态码切换协议 101
                              */
                             pipeline.addLast(new WebSocketServerProtocolHandler("/"));
                             pipeline.addLast(new ServerHandler());
